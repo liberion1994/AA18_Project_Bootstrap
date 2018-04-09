@@ -1,0 +1,617 @@
+[{
+  "id": "agent_move_left",
+  "lhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "tile_right",
+      "name": "right tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_left",
+      "name": "left tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_right"
+    }, {
+      "type": "left_of",
+      "source": "tile_left",
+      "target": "tile_right"
+    }]
+  },
+  "rhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "tile_right",
+      "name": "right tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_left",
+      "name": "left tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_left"
+    }, {
+      "type": "left_of",
+      "source": "tile_left",
+      "target": "tile_right"
+    }]
+  },
+  "nacs": [{
+    "objects": [{
+      "id": "box",
+      "type": "Box"
+    }, {
+      "id": "tile_left",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "box_on_tile",
+      "source": "box",
+      "target": "tile_left"
+    }]
+  }]
+}, {
+  "id": "agent_move_right",
+  "lhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "tile_right",
+      "name": "right tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_left",
+      "name": "left tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_left"
+    }, {
+      "type": "left_of",
+      "source": "tile_left",
+      "target": "tile_right"
+    }]
+  },
+  "rhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "tile_right",
+      "name": "right tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_left",
+      "name": "left tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_right"
+    }, {
+      "type": "left_of",
+      "source": "tile_left",
+      "target": "tile_right"
+    }]
+  },
+  "nacs": [{
+    "objects": [{
+      "id": "box",
+      "type": "Box"
+    }, {
+      "id": "tile_right",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "box_on_tile",
+      "source": "box",
+      "target": "tile_right"
+    }]
+  }]
+}, {
+  "id": "agent_move_top",
+  "lhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "tile_bottom",
+      "name": "bottom tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_top",
+      "name": "top tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_bottom"
+    }, {
+      "type": "top_of",
+      "source": "tile_top",
+      "target": "tile_bottom"
+    }]
+  },
+  "rhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "tile_bottom",
+      "name": "bottom tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_top",
+      "name": "top tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_top"
+    }, {
+      "type": "top_of",
+      "source": "tile_top",
+      "target": "tile_bottom"
+    }]
+  },
+  "nacs": [{
+    "objects": [{
+      "id": "box",
+      "type": "Box"
+    }, {
+      "id": "tile_top",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "box_on_tile",
+      "source": "box",
+      "target": "tile_top"
+    }]
+  }]
+}, {
+  "id": "agent_move_bottom",
+  "lhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "tile_bottom",
+      "name": "bottom tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_top",
+      "name": "top tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_top"
+    }, {
+      "type": "top_of",
+      "source": "tile_top",
+      "target": "tile_bottom"
+    }]
+  },
+  "rhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "tile_bottom",
+      "name": "bottom tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_top",
+      "name": "top tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_bottom"
+    }, {
+      "type": "top_of",
+      "source": "tile_top",
+      "target": "tile_bottom"
+    }]
+  },
+  "nacs": [{
+    "objects": [{
+      "id": "box",
+      "type": "Box"
+    }, {
+      "id": "tile_bottom",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "box_on_tile",
+      "source": "box",
+      "target": "tile_bottom"
+    }]
+  }]
+}, {
+  "id": "agent_push_left",
+  "lhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "box1",
+      "type": "Box"
+    }, {
+      "id": "tile_right",
+      "name": "right tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_middle",
+      "name": "middle tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_left",
+      "name": "left tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_right"
+    }, {
+      "type": "box_on_tile",
+      "source": "box1",
+      "target": "tile_middle"
+    }, {
+      "type": "left_of",
+      "source": "tile_left",
+      "target": "tile_middle"
+    }, {
+      "type": "left_of",
+      "source": "tile_middle",
+      "target": "tile_right"
+    }]
+  },
+  "rhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "box1",
+      "type": "Box"
+    }, {
+      "id": "tile_right",
+      "name": "right tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_middle",
+      "name": "middle tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_left",
+      "name": "left tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_middle"
+    }, {
+      "type": "box_on_tile",
+      "source": "box1",
+      "target": "tile_left"
+    }, {
+      "type": "left_of",
+      "source": "tile_left",
+      "target": "tile_middle"
+    }, {
+      "type": "left_of",
+      "source": "tile_middle",
+      "target": "tile_right"
+    }]
+  },
+  "nacs": [{
+    "objects": [{
+      "id": "box2",
+      "type": "Box"
+    }, {
+      "id": "tile_left",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "box_on_tile",
+      "source": "box2",
+      "target": "tile_left"
+    }]
+  }]
+}, {
+  "id": "agent_push_right",
+  "lhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "box1",
+      "type": "Box"
+    }, {
+      "id": "tile_right",
+      "name": "right tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_middle",
+      "name": "middle tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_left",
+      "name": "left tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_left"
+    }, {
+      "type": "box_on_tile",
+      "source": "box1",
+      "target": "tile_middle"
+    }, {
+      "type": "left_of",
+      "source": "tile_left",
+      "target": "tile_middle"
+    }, {
+      "type": "left_of",
+      "source": "tile_middle",
+      "target": "tile_right"
+    }]
+  },
+  "rhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "box1",
+      "type": "Box"
+    }, {
+      "id": "tile_right",
+      "name": "right tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_middle",
+      "name": "middle tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_left",
+      "name": "left tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_middle"
+    }, {
+      "type": "box_on_tile",
+      "source": "box1",
+      "target": "tile_right"
+    }, {
+      "type": "left_of",
+      "source": "tile_left",
+      "target": "tile_middle"
+    }, {
+      "type": "left_of",
+      "source": "tile_middle",
+      "target": "tile_right"
+    }]
+  },
+  "nacs": [{
+    "objects": [{
+      "id": "box2",
+      "type": "Box"
+    }, {
+      "id": "tile_right",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "box_on_tile",
+      "source": "box2",
+      "target": "tile_right"
+    }]
+  }]
+}, {
+  "id": "agent_push_top",
+  "lhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "box1",
+      "type": "Box"
+    }, {
+      "id": "tile_bottom",
+      "name": "bottom tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_middle",
+      "name": "middle tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_top",
+      "name": "top tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_bottom"
+    }, {
+      "type": "box_on_tile",
+      "source": "box1",
+      "target": "tile_middle"
+    }, {
+      "type": "top_of",
+      "source": "tile_top",
+      "target": "tile_middle"
+    }, {
+      "type": "top_of",
+      "source": "tile_middle",
+      "target": "tile_bottom"
+    }]
+  },
+  "rhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "box1",
+      "type": "Box"
+    }, {
+      "id": "tile_bottom",
+      "name": "bottom tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_middle",
+      "name": "middle tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_top",
+      "name": "top tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_middle"
+    }, {
+      "type": "box_on_tile",
+      "source": "box1",
+      "target": "tile_top"
+    }, {
+      "type": "top_of",
+      "source": "tile_top",
+      "target": "tile_middle"
+    }, {
+      "type": "top_of",
+      "source": "tile_middle",
+      "target": "tile_bottom"
+    }]
+  },
+  "nacs": [{
+    "objects": [{
+      "id": "box2",
+      "type": "Box"
+    }, {
+      "id": "tile_top",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "box_on_tile",
+      "source": "box2",
+      "target": "tile_top"
+    }]
+  }]
+}, {
+  "id": "agent_push_bottom",
+  "lhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "box1",
+      "type": "Box"
+    }, {
+      "id": "tile_bottom",
+      "name": "bottom tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_middle",
+      "name": "middle tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_top",
+      "name": "top tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_top"
+    }, {
+      "type": "box_on_tile",
+      "source": "box1",
+      "target": "tile_middle"
+    }, {
+      "type": "top_of",
+      "source": "tile_top",
+      "target": "tile_middle"
+    }, {
+      "type": "top_of",
+      "source": "tile_middle",
+      "target": "tile_bottom"
+    }]
+  },
+  "rhs": {
+    "objects": [{
+      "id": "agent",
+      "type": "Agent"
+    }, {
+      "id": "box1",
+      "type": "Box"
+    }, {
+      "id": "tile_bottom",
+      "name": "bottom tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_middle",
+      "name": "middle tile",
+      "type": "Tile"
+    }, {
+      "id": "tile_top",
+      "name": "top tile",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "agent_on_tile",
+      "source": "agent",
+      "target": "tile_middle"
+    }, {
+      "type": "box_on_tile",
+      "source": "box1",
+      "target": "tile_bottom"
+    }, {
+      "type": "top_of",
+      "source": "tile_top",
+      "target": "tile_middle"
+    }, {
+      "type": "top_of",
+      "source": "tile_middle",
+      "target": "tile_bottom"
+    }]
+  },
+  "nacs": [{
+    "objects": [{
+      "id": "box2",
+      "type": "Box"
+    }, {
+      "id": "tile_bottom",
+      "type": "Tile"
+    }],
+    "relations": [{
+      "type": "box_on_tile",
+      "source": "box2",
+      "target": "tile_bottom"
+    }]
+  }]
+}]

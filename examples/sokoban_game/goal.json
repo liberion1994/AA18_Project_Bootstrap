@@ -1,0 +1,24 @@
+{
+  "graph": {},
+  "nacs": [{
+    "objects": [{
+      "id": "box",
+      "type": "Box"
+    }, {
+      "id": "tile",
+      "type": "Tile"
+    }, {
+      "id": "trivial",
+      "type": "Trivial"
+    }],
+    "relations": [{
+      "type": "box_on_tile",
+      "source": "box",
+      "target": "tile"
+    }, {
+      "type": "tile_is_trivial",
+      "source": "tile",
+      "target": "trivial"
+    }]
+  }]
+}

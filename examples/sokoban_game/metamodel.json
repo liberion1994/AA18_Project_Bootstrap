@@ -1,0 +1,42 @@
+{
+  "classes": [{
+    "id": "Tile"
+  }, {
+    "id": "Box"
+  }, {
+    "id": "Agent"
+  }, {
+    "id": "Trivial"
+  }, {
+    "id": "Goal"
+  }], 
+  "relations": [{
+    "id": "box_on_tile",
+    "name": "on",
+    "source": "Box",
+    "target": "Tile"
+  }, {
+    "id": "agent_on_tile",
+    "name": "on",
+    "source": "Agent",
+    "target": "Tile"
+  }, {
+    "id": "tile_is_trivial",
+    "name": "is",
+    "source": "Tile",
+    "target": "Trivial"
+  }, {
+    "id": "tile_is_goal",
+    "name": "is",
+    "source": "Tile",
+    "target": "Goal"
+  }, {
+    "id": "left_of",
+    "source": "Tile",
+    "target": "Tile"
+  }, {
+    "id": "top_of",
+    "source": "Tile",
+    "target": "Tile"
+  }]
+}

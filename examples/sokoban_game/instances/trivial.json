@@ -1,0 +1,53 @@
+{
+  "objects": [{
+    "id": "tile_0",
+    "type": "Tile"
+  }, {
+    "id": "tile_1",
+    "type": "Tile"
+  }, {
+    "id": "tile_2",
+    "type": "Tile"
+  }, {
+    "id": "agent",
+    "type": "Agent"
+  }, {
+    "id": "box",
+    "type": "Box"
+  }, {
+    "id": "trivial",
+    "type": "Trivial"
+  }, {
+    "id": "goal",
+    "type": "Goal"
+  }],
+  "relations": [{
+    "type": "tile_is_trivial",
+    "source": "tile_0",
+    "target": "trivial"
+  }, {
+    "type": "tile_is_trivial",
+    "source": "tile_1",
+    "target": "trivial"
+  }, {
+    "type": "tile_is_goal",
+    "source": "tile_2",
+    "target": "goal"
+  }, {
+    "type": "left_of",
+    "source": "tile_0",
+    "target": "tile_1"
+  }, {
+    "type": "left_of",
+    "source": "tile_1",
+    "target": "tile_2"
+  }, {
+    "type": "agent_on_tile",
+    "source": "agent",
+    "target": "tile_0"
+  }, {
+    "type": "box_on_tile",
+    "source": "box",
+    "target": "tile_1"
+  }]
+}
