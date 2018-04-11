@@ -64,9 +64,9 @@
 - `id`：必须，不与其他规则id重复，规则的唯一标识
 - `lhs`：必须，规则的左部（用于匹配），包含一个[对象图](#obj_diagram)
 - `rhs`：必须，规则的右部（用于替换左部），包含一个[对象图](#obj_diagram)
-- `nacs`：可选，规则的negative application conditions（用于限制规则的适用条件），包含一个nac的json数组，nac为[对象图](#obj_diagram)的形式
+- `nacs`：可选，规则的negative application conditions（用于限制规则的适用条件，如果任意一个nac被匹配，则无法apply该rule），包含一个nac的json数组，nac为[对象图](#obj_diagram)的形式
   - `lhs`、`rhs`、`nac`中的对象id只表示他们之间的点（对象）映射关系，**并不具有实际含义**。在与某一实例图匹配的时候，只需考虑类和关系是否匹配
-  - `lhs`和`rhs`、`lhs`和`nac`中相同id的对象表示为同一个对象（“会被保留的对象”），只出现于`lhs`的对象为“会被删除的对象”，只出现于`rhs`/`nac`的对象为“将要新增的对象”
+  - `lhs`和`rhs`、`lhs`和`nac`中相同id的对象表示为同一个对象（“会被保留的对象”），只出现于`lhs`的对象为“会被删除的对象”，只出现于`rhs`的对象为“将要新增的对象”
   - 由morphism的定义可知，一旦确定点（对象）的映射关系，边（关系实例）的映射关系亦可确定，即两侧源、目标和类型均相同的关系实例被视为是identical的，若在另一侧找不到对应的关系实例，则被视为是新增/删除的
 
 ### goal.json
@@ -74,7 +74,7 @@
 目标的json对象，包含
 
 - `graph`：可选，满足目标所需要匹配的[对象图](#obj_diagram)
-- `nacs`：可选，目标的negative application conditions（直观理解即满足目标的[对象图](#obj_diagram)中不能含有的图片段）
+- `nacs`：可选，目标的negative application conditions（如果任意一个nac被匹配，则视为没有满足目标）
   - `graph`与`nacs`不应同时为空，否则goal将没有意义
   - 与规则类似，`graph`和`nac`中的对象id没有实际含义，只表示`graph`与`nac`之间的映射关系
 
