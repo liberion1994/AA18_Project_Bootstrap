@@ -81,12 +81,12 @@ def draw_metamodel(classes, relations, problem_name):
 def load_graph(graph, classes, relations):
     if not graph:
         return {}, {}
-    raw_objects = graph.get('objects')
+    raw_objects = graph.get('objects', [])
     if not raw_objects or not isinstance(raw_objects, list):
         raise Exception('未找到{0}或{0}不为非空数组'.format('objects'))
     raw_relation_instances = graph.get('relations')
-    if not raw_relation_instances or not isinstance(raw_relation_instances, list):
-        raise Exception('未找到{0}或{0}不为非空数组'.format('relations'))
+    if raw_relation_instances and not isinstance(raw_relation_instances, list):
+        raise Exception('{0}格式错误'.format('relations'))
     objects, relation_instances = {}, {}
 
     for raw_object in raw_objects:
@@ -287,6 +287,8 @@ if __name__ == '__main__':
             with open('{0}/examples/{1}/{2}'.format(dir_path, problem_name, args.instance)) as instance_file:
                 try:
                     instance_dict = json.load(instance_file)
+                    if not instance_dict:
+                        raise Exception('载入instance出错：实例为空')
                     objs, relas = load_graph(instance_dict, classes, relations)
                     if not args.check_only:
                         draw_instance(objs, relas, relations, problem_name, args.instance[:-5])
